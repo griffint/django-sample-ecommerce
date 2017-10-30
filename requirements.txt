@@ -1,5 +1,2 @@
-confusable-homoglyphs==2.0.2
 Django==1.11.6
 django-forms-bootstrap==3.1.0
-django-registration==2.3
-pytz==2017.2
