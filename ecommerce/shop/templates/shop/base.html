@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<!-- Navbar on every part of the site. access to account, cart, orders -->
+    <div id="navbar">
+        <h3>Griffin's Shop!</h3>
+        {% if user.is_authenticated %}
+        <p>hello</p>
+        <p>welcome {{ user.username }}</p>
+        <p><a href="/">Shop</a></p>
+        <p><a href="/cart/">Cart</a></p>
+        <p><a href="/orders/">Order History</a></p>
+        <p><a href="/logout">Logout</a></p>
+        {% else %}
+        <p><a href="/login">Login</a></p>
+        <p><a href="/register">Register</a></p>
+        {% endif %}
+    </div>
+<!-- End navbar -->
+<!-- Body of the page - will be extended for each base_SECTION template-->
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

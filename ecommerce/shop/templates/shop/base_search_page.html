@@ -1,0 +1,13 @@
+{% extends "shop/base.html" %}
+
+{% block title %}Search{% endblock %}
+
+{% block content %}
+<!-- TODO put search bar here-->
+<form id="searchform" method="get" accept-charset="utf-8">
+    <button class="searchbutton" type="submit">Search</button>
+    <input class="searchfield" id="searchbox" name="q" type="text" placeholder="Search">
+</form>
+<h4>Some of our products</h4>
+    {% include "shop/components/product_list.html" with product_list=product_list%}
+{% endblock %}

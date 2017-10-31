@@ -1,0 +1,11 @@
+<!-- should have a prop called product_list-->
+    {% if product_list %}
+        {% for product in product_list %}
+            <!--TODO style this nicely-->
+            <h5>{{ product.title }}</h5>
+            <p>{{ product.description }}</p>
+            <p>{{ product.price }}</p>
+        {% endfor %}
+    {% else %}
+        <h4>No products available at this time.</h4>
+    {% endif %}
